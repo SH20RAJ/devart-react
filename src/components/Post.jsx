@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Nav from "./Nav";
+import RelatedPosts from "./RelatedPosts";
 
 const Post = () => {
   const { userId, id } = useParams();
@@ -54,6 +55,7 @@ const Post = () => {
           ></div>
         </div>
       </div>
+      <RelatedPosts username={ userId } />
     </>
   );
 };

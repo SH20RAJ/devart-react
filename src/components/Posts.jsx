@@ -43,7 +43,7 @@ export default function Posts() {
   );
 }
 
-const PostCard = ({ post }) => {
+export const PostCard = ({ post }) => {
   return (
     <div className="bg-white p-4 shadow-md">
       <Link to={post.path}>
