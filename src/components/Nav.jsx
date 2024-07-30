@@ -7,8 +7,8 @@ export default function Nav() {
         <Link to={"/"}><div className="text-white text-2xl font-bold">Dev</div></Link>
         <div className="flex space-x-4">
           <a href="#" className="text-white">Home</a>
-          <a href="#" className="text-white">About</a>
-          <a href="#" className="text-white">Contact</a>
+          <a href="/about" className="text-white">About</a>
+          <a href="/contact" className="text-white">Contact</a>
         </div>
       </div>
     </nav>
