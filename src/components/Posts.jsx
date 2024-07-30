@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Posts() {
   const [posts, setPosts] = useState([]);
@@ -38,7 +39,7 @@ export default function Posts() {
 const PostCard = ({ post }) => {
     return (
         <div className="bg-white p-4 shadow-md">
-            <h2 className="text-xl font-bold">{post.title}</h2>
+            <Link to={post.path}><h2 className="text-xl font-bold">{post.title}</h2></Link>
             <p className="text-gray-600">{post.description}</p>
             <div className="flex justify-between items-center mt-4">
             <a href={post.url} target="_blank" className="text-blue-600">Read more</a>
