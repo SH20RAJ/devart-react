@@ -18,7 +18,7 @@ export default function App() {
 async function postToIndexNow() {
   const url = 'https://api.indexnow.org/IndexNow';
   const data = {
-    "host": "www.example.org",
+    "host": "devart.terabox.tech",
     "key": "67b1059e89d04c82981cbee130ae538f",
     "keyLocation": "https://devart.terabox.tech/67b1059e89d04c82981cbee130ae538f.txt",
     "urlList": [
