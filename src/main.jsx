@@ -11,6 +11,7 @@ import {
   Link,
 } from "react-router-dom";
 import Post from './components/Post.jsx';
+import UserPage from './components/UserPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
     path: ":userId/:id",
     element: <Post />,
   },
+  {
+    path: ":userId",
+    element: <UserPage/>,
+  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
