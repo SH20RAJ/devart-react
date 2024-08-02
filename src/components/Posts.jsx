@@ -54,6 +54,7 @@ export const PostCard = ({ post }) => {
         <a href={post.url} target="_blank" className="text-blue-600">
           Read more
         </a>
+        <Link to={`/${post.user.username}`} className="text-blue-600">
         <div className="flex items-center">
           <img
             src={post.user.profile_image_90}
@@ -62,6 +63,7 @@ export const PostCard = ({ post }) => {
           />
           <p className="text-gray-600 ml-2">{post.user.name}</p>
         </div>
+        </Link>
       </div>
     </div>
   );

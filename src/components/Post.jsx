@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Nav from "./Nav";
 import RelatedPosts from "./RelatedPosts";
 import Footer from "./Footer";
@@ -38,6 +38,7 @@ const Post = () => {
             <a href={post.url} target="_blank" className="text-blue-600">
               Read more
             </a>
+            <Link to={`/${userId}`} className="text-blue-600">
             <div className="flex items-center">
               <img
                 src={post.user.profile_image_90}
@@ -46,6 +47,7 @@ const Post = () => {
               />
               <p className="text-gray-600 ml-2">{post.user.name}</p>
             </div>
+            </Link>
           </div>
         </div>
 
