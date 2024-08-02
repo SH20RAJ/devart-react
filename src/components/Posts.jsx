@@ -7,7 +7,7 @@ export default function Posts() {
 
   useEffect(() => {
     async function fetchPosts() {
-      let response = await fetch("https://dev.to/api/articles");
+      let response = await fetch("https://dev.to/api/articles?per_page=201");
       let data = await response.json();
       setPosts(data);
     }
@@ -16,7 +16,7 @@ export default function Posts() {
 
   const loadmore = async () => {
     let response = await fetch(
-      `https://dev.to/api/articles?page=${posts.length / 30 + 1}`
+      `https://dev.to/api/articles?page=${posts.length / 30 + 1}&per_page=201`
     );
     let data = await response.json();
     setPosts([...posts, ...data]);
