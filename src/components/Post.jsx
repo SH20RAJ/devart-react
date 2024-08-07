@@ -39,14 +39,14 @@ const Post = () => {
               Read more
             </a>
             <Link to={`/${userId}`} className="text-blue-600">
-            <div className="flex items-center">
-              <img
-                src={post.user.profile_image_90}
-                alt={post.user.name}
-                className="w-8 h-8 rounded-full"
-              />
-              <p className="text-gray-600 ml-2">{post.user.name}</p>
-            </div>
+              <div className="flex items-center">
+                <img
+                  src={post.user.profile_image_90}
+                  alt={post.user.name}
+                  className="w-8 h-8 rounded-full"
+                />
+                <p className="text-gray-600 ml-2">{post.user.name}</p>
+              </div>
             </Link>
           </div>
         </div>
@@ -57,8 +57,21 @@ const Post = () => {
             className="mt-4"
           ></div>
         </div>
+        <div className=" flex ">
+          <a href="https://visitorbadge.io/status?path=DevArt">
+            <img src="https://api.visitorbadge.io/api/combined?path=DevArt&countColor=%23263759" />
+          </a>
+          <a href="https://visitorbadge.io/status?path=/lazypro/when-to-consider-design-patterns-45np">
+            <img
+              loading="lazy"
+              className="inline-block"
+              src={"https://api.visitorbadge.io/api/visitors?path=" + post.path}
+            />
+          </a>
+        </div>
       </div>
-      <RelatedPosts username={ userId } />
+
+      <RelatedPosts username={userId} />
       <Footer />
     </>
   );
